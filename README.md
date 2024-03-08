@@ -36,12 +36,13 @@ Para el caso del microservicio de likes lo que generé es la una tabla donde pod
 
 ## adjunto imagen del diagrama
 
-![habi_likes](/microservice_aparments/microservice_like/habi_likes.jpg)
+![habi_likes](microservice_aparments/microservice_like/habi_likes.jpg)
 
 ## Codigo MYSQL
 
 ```bash
-    CREATE TABLE likes (
+
+    CREATE TABLE likes_history (
     id INT(11) AUTO_INCREMENT,
     user_id INT(11),
     apartment_id INT(11),
@@ -50,4 +51,5 @@ Para el caso del microservicio de likes lo que generé es la una tabla donde pod
     FOREIGN KEY (user_id) REFERENCES auth_user_user_permissions(id),
     FOREIGN KEY (apartment_id) REFERENCES property(id)
     );
+
 ```
