@@ -1,9 +1,9 @@
 from factory_errors.Ierrors_factory import IError
 
 
-class ImplementMysqlError(IError):
+class ImplementPathError(IError):
     """
-        Esta clase concreta se encarga de implementar el error para la función mysql.
+        Esta clase concreta se encarga de implementar el error para el path.
     """
     def create_error(self) -> dict:
         """
@@ -11,5 +11,5 @@ class ImplementMysqlError(IError):
         """
         return {
             "Code": 404,
-            "Message": "Datos no encontrados, por favor revise los filtros utilizados."
+            "Message": "No se encuentran datos, por favor corrija el path."
             }

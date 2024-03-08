@@ -9,4 +9,7 @@ class ImplementSplitError(IError):
         """
             Método que crea el error.
         """
-        return {"Message": "revise el path por favor, no se aceptan caracteres especiales."}
+        return {
+            "Code": 400,
+            "Message": "revise el path por favor, no se aceptan caracteres especiales."
+            }

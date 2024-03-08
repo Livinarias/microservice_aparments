@@ -18,15 +18,19 @@ def call_data(path) ->list[dict] | dict:
     data = items_service.get_data(convert_path)
     if len(data) == 0:
         return call_errors(CreatorMysqlError())
-    return [
-        {
-        "Dirección": item[0],
-        "Ciudad": item[1],
-        "Estado": item[2],
-        "Precio de venta": item[3],
-        "Descripción": item[4]
+    return {
+            "Code": 200,
+            "Message": [
+                    {
+                    "Dirección": item[0],
+                    "Ciudad": item[1],
+                    "Estado": item[2],
+                    "Precio de venta": item[3],
+                    "Descripción": item[4]
+                    }
+                    for item in data
+            ]
         }
-        for item in data]
 
 def extract_and_remove_year_parameter(text: str) -> str:
     """
@@ -41,7 +45,6 @@ def extract_and_remove_year_parameter(text: str) -> str:
     format_text_without_year = re.sub(r'=([-\w]+)', r"='\1'", text_without_year)
     return process_path(format_text_without_year +' AND '+ year_parameter)
 
-
 def process_path(path: str) -> str:
     """
         Esta función procesa el path para llamar la función call_data.
@@ -52,3 +55,14 @@ def process_path(path: str) -> str:
         .replace('estado=', 's.name='))
         )
     return path_modify
+
+def validate_path(path: str) -> bool:
+    """
+        Esta función valida el path para llamar la función call_data.
+    """
+    parameters = path.split('&')
+    for param in parameters:
+        matches = re.findall(r'\b\w+=\w*\b', param)
+        if len(matches) == 0:
+            return True
+    return False
