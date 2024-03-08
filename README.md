@@ -36,7 +36,7 @@ Para el caso del microservicio de likes lo que generé es la una tabla donde pod
 
 ## adjunto imagen del diagrama
 
-![habi_likes](microservice_aparments/microservice_like/habi_likes.jpg)
+![habi_likes](microservice_like/habi_likes.jpg)
 
 ## Codigo MYSQL
 
