@@ -29,6 +29,18 @@ Las tecnologías utilizadas para este backend fueron:
 5. **Pregunta 5:** ¿Cómo modificar los queryparams?
     **Respuesta:** Para el caso del manejo de los query params con funciones en el archivo helper me encargue de tratar la data  al mismo tiempo, el patron repository instancia la conexión a msql para traer la información, ser tratada y devolverla al handler.
 
+# Cosejos para correr el codigo
+
+en esta sección daré unos consejos para poder usar el codigo, por temas de seguridad no se debe subir el archivo .env por esta razón cree un archivo .env_dev el cual tendrá las variables que se deben reemplazar, lo unico que debes hacer es sobreescribir el .env_dev a .env y llenar los espacios de las variables de entorno.
+
+aqui te dejo un json con la estructura de consulta pra el frontend
+[structure](practice_microservice/structure.json)
+
+## Tips
+
+- El año puedes filtrarlo por rango de fechas como por solo un año
+- Manten esa estructura ya que las validaciones necesitan el año como primer parametro de consulta
+
 
 # Microservicio de Likes
 
