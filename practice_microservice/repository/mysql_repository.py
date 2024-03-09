@@ -1,4 +1,5 @@
-from .constants import connect_db, query
+from decouple import config
+from .constants import query
 import mysql.connector as connection
 from .Imysql_repository import IRepository
 
@@ -8,7 +9,11 @@ class MysqlRepository(IRepository):
 
     def __init__(self):
         self.cnx = connection.connect(
-            **connect_db
+            host=config('HOST'),
+            port=config('PORT'),
+            user=config('USER'),
+            password=config('PASSWORD'),
+            database=config('DATABASE')
         )
         self.cursor = self.cnx.cursor()
 

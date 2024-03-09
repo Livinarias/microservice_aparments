@@ -1,11 +1,3 @@
-connect_db = {
-    "host": "3.138.156.32",
-    "port": "3309",
-    "user": "pruebas",
-    "password": "VGbt3Day5R",
-    "database": "habi_db"
-}
-
 query = """SELECT p.address, p.city, s.name as estado, p.price,
             p.description FROM property p
             LEFT JOIN status_history sh  on (sh.property_id = p.id)
