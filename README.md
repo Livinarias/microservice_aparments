@@ -33,8 +33,7 @@ Las tecnologías utilizadas para este backend fueron:
 
 en esta sección daré unos consejos para poder usar el codigo, por temas de seguridad no se debe subir el archivo .env por esta razón cree un archivo .env_dev el cual tendrá las variables que se deben reemplazar, lo unico que debes hacer es sobreescribir el .env_dev a .env y llenar los espacios de las variables de entorno.
 
-aqui te dejo un json con la estructura de consulta pra el frontend
-[structure](practice_microservice/structure.json)
+aqui te dejo un json con la estructura de consulta para el frontend [structure](practice_microservice/structure.json)
 
 ## Tips
 
