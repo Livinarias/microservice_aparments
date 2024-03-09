@@ -12,3 +12,5 @@ class CreatorMysqlError(CreatorErrors):
             Método que crea la fábrica de errores.
         """
         return ImplementMysqlError()
+
+

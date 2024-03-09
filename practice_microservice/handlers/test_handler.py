@@ -4,14 +4,13 @@ import json
 from io import BytesIO
 from handler import HttpRequestHandler
 
-constant = '/inmuebles?year=2000-2015&city=bogota'
-# [{
-#                 "Dirección": "calle 23 #45-67",
-#                 "Ciudad": "bogota",
-#                 "Estado": "pre_venta",
-#                 "Precio de venta": 120000000,
-#                 "Descripción": "Hermoso apartamento en el centro de la ciudad"
-#             }]
+constant = [{
+                "Dirección": "calle 23 #45-67",
+                "Ciudad": "bogota",
+                "Estado": "pre_venta",
+                "Precio de venta": 120000000,
+                "Descripción": "Hermoso apartamento en el centro de la ciudad"
+            }]
 
 class TestTestHandler(unittest.TestCase):
     def setUp(self):
