@@ -58,4 +58,4 @@ Para el caso del microservicio de likes lo que generé es la una tabla donde pod
 
 Para este punto cree una función recursiva con la cual se valida cada item si ese item es cero lo que hace es reemplazarlo por un 'x' el cual en la siguiente iteración valida si es cero para dejar la 7 o reemplazarla por el item y así sucesivamente, en este caso lo que hice fue buscar la manera de disminuir la complejidad ciclomatica, al usar una función recursiva y el reduce, el cual es una función que va iterar dependiendo de la cantidad de elementos que se tenga en el segundo parametro.
 
-![code](second_test/second_point.py)
+[code](second_test/second_point.py)
